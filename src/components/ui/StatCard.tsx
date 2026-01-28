@@ -1,9 +1,16 @@
-import { StatCardProps } from "@/infrastructure/interfaces/Interfaces";
-import { ArrowDownRight, ArrowUpRight } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, LucideIcon } from 'lucide-react';
 
-export const StatCard: React.FC<StatCardProps> = ({ title, value, change, changeType, icon: Icon }) => {
+interface StatCardProps {
+  title: string;
+  value: string;
+  change: string;
+  changeType: 'increase' | 'decrease';
+  icon: LucideIcon;
+}
+
+export const StatCard = ({ title, value, change, changeType, icon: Icon }: StatCardProps) => {
   const isIncrease = changeType === 'increase';
-  const changeColor = isIncrease ? 'text-green-500' : 'text-red-500';
+  const color = isIncrease ? 'text-green-500' : 'text-red-500';
   const ChangeIcon = isIncrease ? ArrowUpRight : ArrowDownRight;
 
   return (
@@ -15,7 +22,7 @@ export const StatCard: React.FC<StatCardProps> = ({ title, value, change, change
       <div>
         <p className="text-2xl font-bold text-gray-900 dark:text-white">{value}</p>
         <div className="flex items-center text-xs mt-1">
-          <span className={`${changeColor} flex items-center`}>
+          <span className={`${color} flex items-center`}>
             <ChangeIcon className="h-3 w-3 mr-1" />
             {change}
           </span>

@@ -1,11 +1,3 @@
-export interface StatCardProps {
-  title: string;
-  value: string;
-  change: string;
-  changeType: 'increase' | 'decrease';
-  icon: React.ElementType;
-}
-
 export interface SalesData {
   name: string;
   ventas: number;
