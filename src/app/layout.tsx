@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dashboard App (Recharts)",
+  title: "Dashboard de Analíticas",
   description: "Aplicación de dashboard usando Reacharts",
 };
 

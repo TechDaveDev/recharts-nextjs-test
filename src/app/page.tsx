@@ -37,8 +37,11 @@ export default function DashboardPage() {
       <div className="max-w-7xl mx-auto">
         <header className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Dashboard de Análisis</h1>
-            <p className="text-gray-500 dark:text-gray-400 mt-1">Bienvenido de nuevo, aquí está el resumen de tu negocio.</p>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Dashboard de Analíticas</h1>
+            <p className="text-gray-500 dark:text-gray-400 mt-1">
+              <span>Gráficos generados con </span>
+              <a href="https://recharts.org" className="text-gray-800 dark:text-gray-100 underline" target="_blank">Reacharts</a>
+            </p>
           </div>
 
           <button
@@ -82,10 +85,10 @@ export default function DashboardPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 text-gray-600 dark:text-gray-300">
             <SalesLineChart />
           </div>
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 text-gray-600 dark:text-gray-300">
             <RevenueBarChart />
           </div>
           <div className="lg:col-span-1">
